@@ -21,6 +21,6 @@ public class CmsController {
             @RequestParam(name="sku", required = false) final String sku,
             @RequestParam(name="category", required = false) final String category) {
 
-        return cmsService.findByProductSkuAndCategory(sku, category);
+        return cmsService.findBySkuAndCategory(sku, category);
     }
 }

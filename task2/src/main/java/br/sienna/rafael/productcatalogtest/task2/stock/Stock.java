@@ -13,7 +13,7 @@ public class Stock {
     @JsonIgnore
     public String id;
 
-    public Product product;
+    public String sku;
     public String size;
     public Integer quantity;
     public String warehouse;
@@ -22,7 +22,7 @@ public class Stock {
     public String toString() {
         return "Stock{" +
                 "id='" + id + '\'' +
-                ", product=" + product +
+                ", sku='" + sku + '\'' +
                 ", size='" + size + '\'' +
                 ", quantity=" + quantity +
                 ", warehouse='" + warehouse + '\'' +

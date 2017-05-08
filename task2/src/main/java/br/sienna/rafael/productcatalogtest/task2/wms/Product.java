@@ -18,7 +18,7 @@ public class Product {
     public String price;
     public String name;
     public String description;
-    public String size;
+    public List<String> size;
     public String brand;
     public List<String> categories;
     public String product_image_url;

@@ -19,13 +19,13 @@ public class CmsService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public List<Cms> findByProductSkuAndCategory(final String sku, final String category) {
+    public List<Cms> findBySkuAndCategory(final String sku, final String category) {
         Query query = new Query();
         if (!StringUtils.isEmpty(sku)) {
-            query.addCriteria(where("product.sku").is(sku));
+            query.addCriteria(where("sku").is(sku));
         }
         if (!StringUtils.isEmpty(category)) {
-            query.addCriteria(where("product.categories").is(category));
+            query.addCriteria(where("category").is(category));
         }
         return mongoTemplate.find(query, Cms.class);
     }

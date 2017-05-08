@@ -10,6 +10,6 @@ import java.util.List;
  */
 public interface StockRepository extends MongoRepository<Stock, String> {
 
-    @Query(value="{ 'product.sku' : ?0, 'size': ?1 }", fields="{'quantity':1, 'warehouse':1}")
-    public List<Stock> findByProductSkuAndSize(final String sku, final String size);
+    @Query(value="{ 'sku' : ?0, 'size': ?1 }", fields="{'quantity':1, 'warehouse':1}")
+    public List<Stock> findBySkuAndSize(final String sku, final String size);
 }

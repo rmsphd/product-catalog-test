@@ -20,7 +20,7 @@ public class StockController {
 
     @RequestMapping(path = "/stock", produces = "application/json")
     public List<Stock> getStock(@RequestParam("sku") final String sku, @RequestParam("size") final String size) {
-        return stockRepository.findByProductSkuAndSize(sku, size);
+        return stockRepository.findBySkuAndSize(sku, size);
     }
 
     @ExceptionHandler({IllegalArgumentException.class, MissingServletRequestParameterException.class})
